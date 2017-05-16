@@ -8,15 +8,72 @@ public class Lesson1_Tasks {
     public static void main(String[] args) {
 
         // Task4
-        registerAutoCorrect(" bla bla bla ");
+        //registerAutoCorrect(" bla bla bla ");
 
         // Task3
         //mergeTwoArrays(new int[]{1,2,3}, new int[]{4,5,6} );
 
+        // Task2
+        //removeRepeatedWords("bla dla bla fla");
+
         // Task1
         //countWords("bla 123 ghf");
 
+        // Task0
+        // swapBigSmallChars("");
+
     }
+
+    private static void swapBigSmallChars(String userString) {
+
+        // Поменять местами самую большую и самую маленькою чар
+
+        String bufferString = userString;
+        char big = userString.charAt(0);
+        char small = userString.charAt(0);
+
+        for (int i=0; i<userString.length(); i++){
+            if (big > userString.charAt(i)){
+                big = userString.charAt(i);
+            }
+            if (small < userString.charAt(i)){
+                small = userString.charAt(i);
+            }
+        }
+
+        int indexOfBig = userString.indexOf(small);
+        int indexOfSmall = userString.indexOf(big);
+
+        bufferString = bufferString.substring(0, indexOfBig) + Character.toString(big) + bufferString.substring(indexOfBig+1);
+        bufferString = bufferString.substring(0, indexOfSmall) + Character.toString(small) + bufferString.substring(indexOfSmall+1);
+
+        System.out.println(userString);
+        System.out.println(bufferString);
+    }
+
+    private static void removeRepeatedWords(String userString) {
+
+        // Удалить из предложения слова которые повторяются.
+
+        String uniqueWordsString = "";
+
+        ArrayList<String> words = stringToListOfWords(userString);
+        ArrayList<String> uniqueWords = new ArrayList<>();
+
+        for (String word : words){
+            if (!uniqueWords.contains(word)){
+             uniqueWords.add(word);
+            }
+        }
+
+        for (String word : uniqueWords){
+            uniqueWordsString += " " + word;
+        }
+        uniqueWordsString = uniqueWordsString.substring(1);
+        System.out.println(uniqueWordsString);
+
+    }
+
 
 
     public static int countWords(String userString){
