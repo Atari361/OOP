@@ -8,19 +8,19 @@ public class Lesson1_Tasks {
     public static void main(String[] args) {
 
         // Task4
-        //registerAutoCorrect(" bla bla bla ");
+        registerAutoCorrect(" bla bla bla ");
 
         // Task3
-        //mergeTwoArrays(new int[]{1,2,3}, new int[]{4,5,6} );
+        mergeTwoArrays(new int[]{1,2,3}, new int[]{4,5,6} );
 
         // Task2
-        //removeRepeatedWords("bla dla bla fla");
+        removeRepeatedWords("bla dla bla fla");
 
         // Task1
-        //countWords("bla 123 ghf");
+        countWords("bla 123 ghf");
 
         // Task0
-        // swapBigSmallChars("");
+         swapBigSmallChars("abcxyz");
 
     }
 
