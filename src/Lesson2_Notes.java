@@ -29,7 +29,6 @@ public class Lesson2_Notes {
                     maxIndex = i;
                     max = arrayCopy[i];
                 }
-                if
         }
 
     }

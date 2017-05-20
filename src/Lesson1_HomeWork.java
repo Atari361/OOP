@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Created by pavlo.letskyi on 5/16/2017.
  */
-public class Lesson1_Tasks {
+public class Lesson1_HomeWork {
 
     public static void main(String[] args) {
 
