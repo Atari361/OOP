@@ -1,5 +1,0 @@
-A shorter sentence than "the quick brown fox jumped over the lazy dog" which uses every letter in the alphabet, a pangram. First mentioned in Mark Dunn's book Ella Minnow Pea.
-There are 32 letters, only 6 are repeated, making this the shortest coherent pangram.
-On wikipedia, they have a whole page devoted to pangrams.
-The only two that actually make any sense are "pack my box with five dozen liquor jugs" and "the quick brown fox jumped over the lazy dog."
-Besides these, there are many others that are used my different companies to test fonts.
