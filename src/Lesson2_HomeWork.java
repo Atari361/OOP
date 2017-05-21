@@ -12,6 +12,7 @@ public class Lesson2_HomeWork {
 
     static String alphabetLow = "abcdefghijklmnopqrstuvwxyz";
     static String alphabetUp = alphabetLow.toUpperCase();
+    static String numbers = "0123456789";
 
     public static void main(String[] args) throws IOException {
 
@@ -36,6 +37,8 @@ public class Lesson2_HomeWork {
                     decryptedString += decryptSymbol(currentSymbol, shift, alphabetLow);
                 } else if (alphabetUp.contains(currentSymbol)) {
                     decryptedString += decryptSymbol(currentSymbol, shift, alphabetUp);
+                } else if (numbers.contains(currentSymbol)) {
+                    decryptedString += decryptSymbol(currentSymbol, shift, numbers);
                 } else {
                     decryptedString += currentSymbol;
                 }
@@ -76,6 +79,8 @@ public class Lesson2_HomeWork {
                     encryptedString += encryptSymbol(currentSymbol, shift, alphabetLow);
                 } else if (alphabetUp.contains(currentSymbol)) {
                     encryptedString += encryptSymbol(currentSymbol, shift, alphabetUp);
+                } else if (numbers.contains(currentSymbol)) {
+                    encryptedString += encryptSymbol(currentSymbol, shift, numbers);
                 } else {
                     encryptedString += currentSymbol;
                 }
