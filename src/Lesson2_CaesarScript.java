@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Created by letsk on 05/20/2017.
  */
-public class Lesson2_HomeWork {
+public class Lesson2_caesarScript {
 
     static String alphabetLow = "abcdefghijklmnopqrstuvwxyz";
     static String alphabetUp = alphabetLow.toUpperCase();

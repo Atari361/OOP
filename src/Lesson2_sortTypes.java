@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Created by dell on 5/16/2017.
  */
-public class Lesson2_Notes_sortTypes {
+public class Lesson2_sortTypes {
 
     public static int iter;
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Lesson2_Notes_sortTypes {
 //        bubbleSort(arrayCopy);
 //        shakeSort(arrayCopy);
 //        selectionSort(arrayCopy);
-        insertSort(arrayCopy);
+//        insertSort(arrayCopy);
         System.out.println(Arrays.toString(arrayCopy));
         System.out.println("ITER = " + iter);
     }
@@ -26,10 +26,10 @@ public class Lesson2_Notes_sortTypes {
                 if (array[y] < array[y-1]){
                     swap(array, y, y-1);
                 }
+                iter++;
             }
             iter++;
         }
-        iter++;
     }
 
     private static void selectionSort(int[] array) {
