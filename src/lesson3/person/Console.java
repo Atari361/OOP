@@ -10,31 +10,23 @@ public class Console {
 
     public static void main(String[] args) {
         ArrayList<Person> list = new ArrayList<>();
-        Scanner scan = new Scanner(System.in);
         do {
             list.add(createPerson());
-            System.out.println("Add new person? Y/N");
-            String answer = scan.next();
-            if (answer == "Y"){
-                continue;
-            } else {
-                break;
-            }
-        } while (true);
+
+        } while (askQuestion());
         System.out.println();
     }
 
-    private static void askQuestion() {
+    private static boolean askQuestion() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Add new person? Y/N");
-        String answer = scan.next();
-
-        if (answer == "Y"){
-            answer = scan.next();
-
+        String ans = scan.next();
+        if (ans.equalsIgnoreCase("Y")){
+            return true;
         } else {
             System.out.println("exit");
-
+            scan.close();
+            return false;
         }
     }
 
@@ -55,7 +47,6 @@ public class Console {
             System.out.println("ERROR! Please enter age again!");
             scan.next();
         } while (true);
-        scan.close();
         return person;
     }
 }
