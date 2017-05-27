@@ -5,24 +5,39 @@ package lesson4.Telephone;
  */
 public class SimCard {
 
-    int balance;
-    int tarif;
+    private double balance;
+    private double tarif;
 
+    public SimCard(String operator){
+        switch (operator){
+            case "Vodafone": {
+                this.balance = 10;
+                this.tarif = 0.10;
+            }
+            case "Life": {
+                this.balance = 15;
+                this.tarif = 0.20;
+            }
 
-    public int getBalance() {
+            case "Kyivstar": {
+                this.balance = 20;
+                this.tarif = 0.30;
+            }
+        }
+    }
+
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
-        this.balance += balance;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
-    public int getTarif() {
+    public double getTarif() {
         return tarif;
     }
 
-    public void setTarif(int tarif) {
-        this.tarif = tarif;
-    }
+
 
 }

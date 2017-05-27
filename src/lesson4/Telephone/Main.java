@@ -5,15 +5,20 @@ package lesson4.Telephone;
  */
 public class Main {
     public static void main(String[] args) {
-        SimCard simCard = new SimCard();
-        simCard.setBalance(100);
-        simCard.setTarif(5);
-        Phone phone = new Phone();
-        phone.setSimCard(simCard);
-        phone.setModel("iPhone");
+        SimCard simCard = new SimCard("Life");
+        Phone phone = new Phone("iPhone");
         phone.newContact("Igor", 123);
         phone.newContact("Igor2", 123);
         phone.newContact("Igor3", 123);
         phone.showContacts();
+
+        phone.randomCall(10); // Should return error.
+        phone.setSimCard(simCard);
+        phone.getSimcardInfo();
+        phone.randomCall(66.6); // no error
+        phone.randomCall(66.6);
+        phone.refillBalance(100);
+        phone.randomCall(66.6);
+        phone.getSimcardInfo();
     }
 }
