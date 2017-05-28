@@ -11,31 +11,45 @@ public class Number {
         number = num;
     }
 
-
     public int get() {
         return number;
     }
 
-    public Number addNumber(Number num) {
-        return new Number(this.number += num.get());
+    public Number add(Number num) {
+        return new Number(this.number + num.get());
     }
 
     public Number sub(Number num){
-        return new Number(this.number -= num.get());
+        return new Number(this.number - num.get());
     }
-    public Number  mul(Number num){
-        return new Number(this.number *= num.get());
+
+    public Number mul(Number num){
+        return new Number(this.number * num.get());
     }
-    public Number  div(Number num){
-        return new Number(this.number /= num.get());
+
+    public Number div(Number num){
+        return new Number(this.number / num.get());
     }
+
     public Number pow(Number exponent){
-        return new Number(0);
+        int result = 0;
+        for (int i = 0; i < exponent.get(); i++) {
+            result += mul(this).get();
+        }
+        return new Number(result);
     }
+
     public Number fact(){
-        return new Number(0);
+
+        if (number == 0){
+            return new Number(1);
+        }
+
+        return new Number(number * new Number(number-1).fact().get());
     }
+
     public Number mod(Number num){
-        return new Number(0);
+        return new Number(this.number % num.get());
     }
+
 }
