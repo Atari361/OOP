@@ -3,7 +3,7 @@ package lesson4;
 /**
  * Created by dell on 5/23/2017.
  */
-public class Main {
+public class HomeWorkDescription {
 
     /*
     1. Создаем классы с конструкторами:

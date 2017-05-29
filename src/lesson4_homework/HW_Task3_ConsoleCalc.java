@@ -1,4 +1,4 @@
-package lesson4_homework.calculator;
+package lesson4_homework;
 
 import java.lang.*;
 import java.lang.Number;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by letsk on 05/29/2017.
  */
-public class ConsoleCalc {
+public class HW_Task3_ConsoleCalc {
 
     static int numCounter = 1;
 

@@ -1,4 +1,4 @@
-package lesson4_homework.calculator;
+package lesson4_homework.objects;
 
 /**
  * Created by letsk on 05/27/2017.

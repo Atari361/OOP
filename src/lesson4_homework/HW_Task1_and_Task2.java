@@ -1,10 +1,13 @@
-package lesson4_homework.calculator;
+package lesson4_homework;
 
+
+import lesson4_homework.objects.Fraction;
+import lesson4_homework.objects.Number;
 
 /**
  * Created by letsk on 05/27/2017.
  */
-public class Main {
+public class HW_Task1_and_Task2 {
     public static void main(String[] args) {
 
         Number number4 = new Number(4);
