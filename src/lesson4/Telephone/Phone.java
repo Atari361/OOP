@@ -7,12 +7,16 @@ import java.util.ArrayList;
  */
 public class Phone {
 
-    private String model;
-    private SimCard simCard;
-    private ArrayList<Contact> contacts = new ArrayList<>();
+    protected String model;
+    protected SimCard simCard;
+    protected ArrayList<Contact> contacts = new ArrayList<>();
+
+    public Phone(String model, SimCard simCard) {
+        this.model = model;
+        this.simCard = simCard;
+    }
 
     public Phone(String model) {
-        this.model = model;
     }
 
     public String getModel() {
@@ -24,7 +28,7 @@ public class Phone {
     }
 
     public SimCard getSimCard() {
-        return simCard;
+        return null;
     }
 
     public void setSimCard(SimCard simCard) {
@@ -65,9 +69,13 @@ public class Phone {
         }
     }
 
-    public void getSimcardInfo(){
-        System.out.println("Your balance: " + getSimCard().getBalance());
-        System.out.println("Your tarif: " + getSimCard().getTarif() + " uah/min\n");
+    public String getSimcardInfo(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Your balance: " + getSimCard().getBalance() +
+                "\nYour tarif: " + getSimCard().getTarif() + " uah/min\n");
+        return sb.toString();
     }
+
+
 
 }

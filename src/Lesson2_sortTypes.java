@@ -13,7 +13,7 @@ public class Lesson2_sortTypes {
         System.out.println(Arrays.toString(arrayCopy));
 //        stupidSort(arrayCopy);
 //        bubbleSort(arrayCopy);
-//        shakeSort(arrayCopy);
+        shakeSort(arrayCopy);
 //        selectionSort(arrayCopy);
 //        insertSort(arrayCopy);
         System.out.println(Arrays.toString(arrayCopy));
