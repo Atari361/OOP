@@ -5,9 +5,15 @@ package lesson6.human;
  */
 public interface Humanable {
 
-    void beath();
-    void eat();
-    void poop();
+    default void breath(){
+        System.out.println("HUMAN BREATH");
+    };
+    default void run(){
+        System.out.println("HUMAN RUN");
+    };
+    default void sleep(){
+        System.out.println("HUMAN SLEEP");
+    };
 
 
 

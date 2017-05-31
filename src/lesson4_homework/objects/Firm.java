@@ -1,13 +1,11 @@
 package lesson4_homework.objects;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 
 /**
  * Created by pavlo.letskyi on 5/29/2017.
  */
+
 public class Firm {
     /* Написать класс фирма (hw2.Firm), содержащий имя, адрес, заплатанный счет (сумма), сотрудников.
 У каждого сотрудника (hw2.Employee) есть имя, фамилия, ставка зарплаты (сумма), его личный
@@ -35,6 +33,7 @@ public class Firm {
     }
     public void printAllEmployeesBySalary(){
         System.out.println("List of Employees:");
+
         for (Employee employee : employees){
             System.out.println("FIO: " + employee.getName() + " " + employee.getSurname());
             System.out.println("Salary: " + employee.getSalary());

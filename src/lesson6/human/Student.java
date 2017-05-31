@@ -5,26 +5,33 @@ package lesson6.human;
  */
 public class Student extends Human {
 
-    String university = "KPI";
+    private String name;
+    private String surname;
+    private String group;
 
-    @Override
-    public void beath() {
-
+    public Student(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
 
-    @Override
-    public void eat() {
-
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public void poop() {
+    public String getSurname() {
+        return surname;
+    }
 
+    public String getJoinedGroup() {
+        return group;
+    }
+
+    public void setJoinedGroup(String group) {
+        this.group = group;
     }
 
     @Override
     public void aboutHuman(){
-        super.aboutHuman();
-        System.out.println("University: " + university);
+
     }
 }
