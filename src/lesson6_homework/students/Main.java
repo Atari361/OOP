@@ -17,12 +17,13 @@ public class Main {
         StudentsGroup group = new StudentsGroup();
 
         do {
-            System.out.println("\nEnter the number of action:\n" +
-                    "1. ADD new student\n" +
-                    "2. REMOVE student\n" +
-                    "3. CHECK if student is already in group\n" +
-                    "4. PRINT students of the group\n" +
-                    "5. Closed app\n");
+            System.out.println("Enter the number of action:\n" +
+                    "1 - ADD new student\n" +
+                    "2 - REMOVE student\n" +
+                    "3 - CHECK if student is already in group\n" +
+                    "4 - PRINT students of the group\n" +
+                    "5 - SORT students by their surnames\n" +
+                    "6 - Closed app\n");
 
             if (scanner.hasNextInt()){
                 int actionNumber = scanner.nextInt();
@@ -39,7 +40,10 @@ public class Main {
                     } case 4: {
                         group.printGroup();
                         break;
-                    }case 5: {
+                    } case 5: {
+                        group.sortGroupByName();
+                        break;
+                    } case 6: {
                         closeAppFlag = false;
                         break;
                     } default:{

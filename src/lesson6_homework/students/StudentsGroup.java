@@ -30,7 +30,7 @@ public class StudentsGroup implements StudentsGroupable {
             } else {
                 System.out.println("Please enter valid number!");}
         } while (true);
-        System.out.println("Group has been created!\n");
+        System.out.println("Empty group has been created!\n");
     }
 
     @Override
@@ -91,7 +91,7 @@ public class StudentsGroup implements StudentsGroupable {
 
     public void sortGroupByName(){
         int left = 0;
-        int right = students.length-freeSlot;
+        int right = freeSlot-1;
 
         while (left < right){
             for (int y=left; y<right; y++) {
@@ -107,6 +107,7 @@ public class StudentsGroup implements StudentsGroupable {
             }
             left++;
         }
+        System.out.println("Student list sorted!\n");
     }
 
     private void swap(int a, int b){
