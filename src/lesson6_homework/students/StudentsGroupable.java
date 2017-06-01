@@ -7,8 +7,8 @@ import lesson6.human.Student;
  */
 public interface StudentsGroupable {
 
-    void addStudent(Student student);
-    void removeStudent(String studentSurname);
-    void searchStudent(String studentSurname);
+    void addStudent();
+    void removeStudent();
+    void searchStudent();
 
 }
