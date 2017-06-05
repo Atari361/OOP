@@ -67,10 +67,10 @@ public class StudentsGroup implements StudentsGroupable {
 
     @Override
     public void searchStudent() {
-        System.out.println("Enter student surname to remove");
+        System.out.println("Enter student surname to search");
         String studentSurname = scanner.next();
         for (Student stud : students ){
-            if (stud.getSurname() == studentSurname){
+            if (stud.getSurname().equals(studentSurname)){
                 System.out.println("PASS! Such student exists!");
                 return;
             }
