@@ -12,7 +12,7 @@ public class Lesson1_Notes {
 
         int [] arr = {1,2,2};
 
-        //equals for objects; == for primitives
+        //equals for object/s; == for primitives
 
         Scanner scan = new Scanner(System.in);
 
@@ -32,7 +32,7 @@ public class Lesson1_Notes {
 
         ArrayList<Integer> list = new ArrayList<>();
 
-        // for objects link is copied to method
+        // for object/s link is copied to method
 
     }
 

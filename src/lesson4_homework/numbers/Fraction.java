@@ -1,4 +1,4 @@
-package lesson4_homework.objects;
+package lesson4_homework.numbers;
 
 /**
  * Created by letsk on 05/28/2017.

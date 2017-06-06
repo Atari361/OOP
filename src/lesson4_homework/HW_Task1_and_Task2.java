@@ -1,8 +1,8 @@
 package lesson4_homework;
 
 
-import lesson4_homework.objects.Fraction;
-import lesson4_homework.objects.Number;
+import lesson4_homework.numbers.Fraction;
+import lesson4_homework.numbers.Number;
 
 /**
  * Created by letsk on 05/27/2017.
