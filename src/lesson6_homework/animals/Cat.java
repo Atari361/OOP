@@ -3,7 +3,7 @@ package lesson6_homework.animals;
 /**
  * Created by pavlo.letskyi on 6/6/2017.
  */
-public class Cat extends Animal {
+public class Cat {
 
     String name;
     boolean isHairRisen = false;
