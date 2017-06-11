@@ -8,5 +8,6 @@ public interface StudentsGroupable {
     void addStudent();
     void removeStudent();
     void searchStudent();
-
+    void printGroup();
+    void transferStudent();
 }

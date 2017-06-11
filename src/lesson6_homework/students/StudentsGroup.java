@@ -2,38 +2,26 @@ package lesson6_homework.students;
 
 import lesson6.human.Student;
 
-import java.sql.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * Created by pavlo.letskyi on 5/31/2017.
  */
-public class StudentsGroup implements StudentsGroupable {
+public class StudentsGroup  {
 
     private Scanner scanner;
     private String groupName;
     private Student[] students;
     private int freeSlot;
 
-    public StudentsGroup() {
-        this.scanner = new Scanner(System.in);
-        this.freeSlot = 0;
-        this.scanner = new Scanner(System.in);
-        System.out.println("Enter Group Name");
-        groupName = scanner.next();
-        System.out.println("Enter group size");
-        do {
-            if (scanner.hasNextInt()){
-                this.students = new Student[scanner.nextInt()];
-                break;
-            } else {
-                System.out.println("Please enter valid number!");}
-        } while (true);
+    public StudentsGroup(String groupName, int groupSize) {
+        scanner = new Scanner(System.in);
+        freeSlot = 0;
+        this.groupName = groupName;
+        students = new Student[groupSize];
         System.out.println("Empty group has been created!\n");
     }
 
-    @Override
     public void addStudent() {
         if (freeSlot < students.length) {
             System.out.println("Enter Student name");
@@ -47,7 +35,14 @@ public class StudentsGroup implements StudentsGroupable {
         }
     }
 
-    @Override
+    public void addStudent(Student student) {
+        if (freeSlot < students.length) {
+            students[freeSlot++] = student;
+        } else {
+            System.out.println("GROUP IS FULL!\n");
+        }
+    }
+
     public void removeStudent() {
         System.out.println("Enter student surname to remove");
         String studentSurname = scanner.next();
@@ -65,28 +60,53 @@ public class StudentsGroup implements StudentsGroupable {
         System.out.println("\nFAIL! No such student found!");
     }
 
-    @Override
-    public void searchStudent() {
-        System.out.println("Enter student surname to search");
+    public void removeStudent(int studentNumber) {
+        students[studentNumber] = null;
+        if (freeSlot >= 0){
+            swap(studentNumber, freeSlot-1);
+        }
+        --freeSlot;
+    }
+
+    public boolean searchStudent() {
+        System.out.println("Enter student surname");
         String studentSurname = scanner.next();
         for (Student stud : students ){
             if (stud.getSurname().equals(studentSurname)){
                 System.out.println("PASS! Such student exists!");
-                return;
+                return true;
             }
         }
         System.out.println("FAIL! No such student found!");
+        return false;
     }
 
+
     public void printGroup(){
-        System.out.println("\nGroup: " + groupName + "\nStudents:");
+        System.out.println("\nGroup: " + groupName + "\nSize: " + students.length);
         for (Student student : students){
             if (student != null) {
-                System.out.println("FIO: " + student.getName() + " " + student.getSurname());
+                System.out.println("Student: " + student.getName() + " " + student.getSurname());
             } else {
                 System.out.println("[Free slot]");
             }
         }
+    }
+
+
+    public void transferStudent(String studentSurname, StudentsGroup groupToTransfer) {
+        System.out.println("Select group to transfer");
+
+        for (int i=0; i < students.length; i++){
+
+            if (students[i].getSurname().equals(studentSurname)){
+                groupToTransfer.addStudent(students[i]);
+                removeStudent(i);
+                System.out.println("Student is transferred");
+                return;
+            }
+        }
+        System.out.println("Transfer has failed:(");
     }
 
     public void sortGroupByName(){
@@ -116,4 +136,7 @@ public class StudentsGroup implements StudentsGroupable {
         students[b] = tmp;
     }
 
+    public String getGroupName() {
+        return groupName;
+    }
 }
