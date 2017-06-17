@@ -7,16 +7,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayNodes nodes = new ArrayNodes();
+        LinkedList nodes = new LinkedList();
 
         nodes.empty();
-        nodes.push(1);
-        nodes.push(2);
         nodes.push(3);
-        System.out.println(nodes.getLastNode().getElem());
-        System.out.println(nodes.size());
+        nodes.push(5);
+        nodes.push(2);
+        nodes.push(6);
+        nodes.push(4);
         nodes.pop();
-        System.out.println(nodes.peek());
+        System.out.println(nodes);
 
 
 //        ArrayStack stack = new ArrayStack(3);
