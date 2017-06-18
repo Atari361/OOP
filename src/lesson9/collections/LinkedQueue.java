@@ -11,7 +11,7 @@ public class LinkedQueue extends AbstractQueue {
     private Node tail;
     private int size;
 
-    @Override
+
     public boolean add(Integer el) {
         if (el == null) return false;
 
@@ -38,7 +38,7 @@ public class LinkedQueue extends AbstractQueue {
         }
     }
 
-    @Override
+
     public Integer remove() {
         int result = head.elem;
         head = head.next;
@@ -55,7 +55,7 @@ public class LinkedQueue extends AbstractQueue {
         }
     }
 
-    @Override
+
     public Integer element() {
         return head.elem;
     }
@@ -69,17 +69,17 @@ public class LinkedQueue extends AbstractQueue {
         }
     }
 
-    @Override
+
     public int size() {
         return this.size;
     }
 
-    @Override
+
     public void clear() {
         head = tail = null;
     }
 
-    @Override
+
     public Integer[] toArray() {
         Integer[] arr = new Integer[size];
         Node copyHead = head;

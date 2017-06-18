@@ -5,23 +5,25 @@ package lesson9.collections;
  */
 public interface Queue {
 
-    boolean add(Integer el);
+    //boolean add(Integer el);
     boolean offer(Integer el);
     // returns exception
 
-    Integer remove();
+    //nteger remove();
     Integer poll();
     // NoSuchElementEception
 
-    Integer element(); //peak
+    //Integer element(); //peak
     Integer peek(); //+exception
 
+    /*
     int size();
     boolean isEmpty();
     void clear();
     Integer[] toArray();
     void addAllFrom(Queue q);
     void removeAllTo(Queue q);
+    */
 
 
 }

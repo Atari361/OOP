@@ -18,7 +18,7 @@ public class ArrayStack implements Stack {
     }
 
     @Override
-    public boolean push(int elem) {
+    public boolean push(Integer elem) {
         try {
             array[(lastElemIndex++)+1] = elem;
             return true;
@@ -28,7 +28,7 @@ public class ArrayStack implements Stack {
         }
     }
 
-    @Override
+
     public boolean empty() {
         if (lastElemIndex < 0) return false;
         return true;
@@ -46,7 +46,7 @@ public class ArrayStack implements Stack {
         return array[lastElemIndex];
     }
 
-    @Override
+
     public int size() {
         if (lastElemIndex == -1) return 0;
         return lastElemIndex+1;

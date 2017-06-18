@@ -8,12 +8,11 @@ public class LinkedList implements Stack{
     private Node lastNode;
 
     @Override
-    public boolean push(int elem) {
+    public boolean push(Integer elem) {
         lastNode = new Node(elem, lastNode);
         return true;
     }
 
-    @Override
     public boolean empty() {
         return lastNode == null;
     }
@@ -30,7 +29,7 @@ public class LinkedList implements Stack{
         return lastNode.getElem();
     }
 
-    @Override
+
     public int size() {
         int i = 0;
         Node lastNodeCopy = lastNode;

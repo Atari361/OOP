@@ -15,7 +15,7 @@ public class ArrayQueue extends AbstractQueue{
         this.size = size;
     }
 
-    @Override
+
     public boolean add(Integer el) {
         if (el == null) return false;
 
@@ -33,7 +33,7 @@ public class ArrayQueue extends AbstractQueue{
         return false;
     }
 
-    @Override
+
     public Integer remove() {
         Integer result = array[0];
         for (int i=0; i < size-1; i++){
@@ -47,7 +47,6 @@ public class ArrayQueue extends AbstractQueue{
         return null;
     }
 
-    @Override
     public Integer element() {
         return array[0];
     }
@@ -61,17 +60,17 @@ public class ArrayQueue extends AbstractQueue{
         }
     }
 
-    @Override
+
     public int size() {
         return size;
     }
 
-    @Override
+
     public void clear() {
         array = new Integer[size];
     }
 
-    @Override
+
     public Integer[] toArray() {
         return array;
     }

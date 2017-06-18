@@ -4,7 +4,7 @@ package lesson9.collections;
  * Created by dell on 6/13/2017.
  */
 public abstract class AbstractQueue implements Queue {
-
+    /*
     @Override
     public boolean isEmpty() {
         return size() == 0;
@@ -22,5 +22,5 @@ public abstract class AbstractQueue implements Queue {
     @Override
     public void removeAllTo(Queue q) {
 
-    }
+    }*/
 }

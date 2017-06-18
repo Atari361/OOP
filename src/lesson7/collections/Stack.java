@@ -5,9 +5,9 @@ package lesson7.collections;
  */
 public interface Stack {
 
-    boolean push(int elem); // add elem
-    boolean empty();
+    boolean push(Integer elem); // add elem
+    //boolean empty();
     Integer pop(); // removed last element and returns it
     Integer peek(); // return last element
-    int size();
+    //int size();
 }
