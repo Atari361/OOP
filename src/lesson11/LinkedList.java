@@ -1,13 +1,15 @@
 package lesson11;
 
+import java.util.Iterator;
+
 /**
  * Created by dell on 6/20/2017.
  */
-public class LinkedList implements List {
+public class LinkedList implements List, Iterable<Integer> {
 
-    Node firstNode;
-    Node lastNode;
-    int size;
+    private Node firstNode;
+    private Node lastNode;
+    private int size;
 
     @Override
     public void add(Integer el) {
@@ -144,6 +146,25 @@ public class LinkedList implements List {
             }
             return temp;
         }
+    }
+
+    @Override
+    public Iterator<Integer> iterator() {
+        Iterator<Integer> iter = new Iterator<Integer>() {
+            Node currentNode = firstNode;
+            @Override
+            public boolean hasNext() {
+                return currentNode != null;
+            }
+
+            @Override
+            public Integer next() {
+                int result = currentNode.elem;
+                currentNode = currentNode.prev;
+                return result;
+            }
+        };
+        return iter;
     }
 
     class Node {
