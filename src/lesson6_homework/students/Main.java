@@ -14,6 +14,18 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         ArrayList<StudentsGroup> studentsGroups = new ArrayList<>();
+
+        studentsGroups.add(new StudentsGroup("QA", 4));
+        studentsGroups.get(0).addStudent(new Student("zorg", "zorg"));
+        studentsGroups.get(0).addStudent(new Student("zorg", "jeep"));
+        studentsGroups.get(0).addStudent(new Student("zorg", "cook"));
+        studentsGroups.get(0).addStudent(new Student("zorg", "poop"));
+        studentsGroups.get(0).printGroup();
+        studentsGroups.get(0).sortGroupByName();
+        studentsGroups.get(0).printGroup();
+
+        /*
+
         int currentGroup = 0;
         boolean closeAppFlag = true;
 
@@ -125,6 +137,7 @@ public class Main {
         for (StudentsGroup group : studentsGroups){
             System.out.println(i++ + ". " + group.getGroupName());
         }
-    }
+    */}
+
 
 }

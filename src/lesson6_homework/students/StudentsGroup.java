@@ -2,6 +2,9 @@ package lesson6_homework.students;
 
 import lesson6.human.Student;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -110,12 +113,18 @@ public class StudentsGroup  {
     }
 
     public void sortGroupByName(){
+
+        Arrays.sort(students, Student.NameComparator);
+
+        /*
         int left = 0;
         int right = freeSlot-1;
-
         while (left < right){
             for (int y=left; y<right; y++) {
-                if (students[y+1] != null && students[y].getSurname().compareTo(students[y+1].getSurname()) > 0) {
+                if (students[y+1] != null &&
+//                        students[y].getSurname().compareTo(students[y+1].getSurname())
+                students[y].compareTo(students[y+1])
+                > 0) {
                     swap(y, y+1);
                 }
             }
@@ -127,6 +136,7 @@ public class StudentsGroup  {
             }
             left++;
         }
+        */
         System.out.println("Student list sorted!\n");
     }
 

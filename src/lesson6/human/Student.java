@@ -1,9 +1,11 @@
 package lesson6.human;
 
+import java.util.Comparator;
+
 /**
  * Created by dell on 5/30/2017.
  */
-public class Student extends Human {
+public class Student extends Human implements Comparable<Student> {
 
     private String name;
     private String surname;
@@ -31,7 +33,21 @@ public class Student extends Human {
     }
 
     @Override
-    public void aboutHuman(){
+    public void aboutHuman() {
 
     }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.getSurname().compareTo(o.getSurname());
+    }
+
+
+    public static Comparator<Student> NameComparator = new Comparator<Student>() {
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o1.getSurname().compareTo(o2.getSurname());
+        }
+    };
+
 }
