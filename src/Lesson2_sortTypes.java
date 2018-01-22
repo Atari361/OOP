@@ -11,7 +11,7 @@ public class Lesson2_sortTypes {
         int[] array = getArray(10);
         int[] arrayCopy = getArrayCopy(array);
         System.out.println(Arrays.toString(arrayCopy));
-//        stupidSort(arrayCopy);
+//        stupidSort(arrayCopy); 123
 //        bubbleSort(arrayCopy);
         shakeSort(arrayCopy);
 //        selectionSort(arrayCopy);
