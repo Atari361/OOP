@@ -16,7 +16,7 @@ public class Lesson1_Notes {
 
         Scanner scan = new Scanner(System.in);
 
-        //scan.next() - to clean cache
+        //scan.next() - to clean cache 456
 
         FileWriter fw = new FileWriter("file.txt"); // +true to re-write
         fw.write("str1");
